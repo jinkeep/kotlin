@@ -80,7 +80,7 @@ public abstract class CodegenTestCase extends UsefulTestCase {
     }
 
     protected void loadText(@NotNull String text) {
-        myFiles = CodegenTestFiles.create("a.kt", text, myEnvironment.getProject());
+        myFiles = CodegenTestFiles.create("a_test.kt", text, myEnvironment.getProject());
     }
 
     @NotNull
