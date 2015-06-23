@@ -802,9 +802,9 @@ public class BytecodeTextTestGenerated extends AbstractBytecodeTextTest {
             JetTestUtils.assertAllTestsPresentByMetadata(this.getClass(), new File("compiler/testData/codegen/bytecodeText/whenEnumOptimization"), Pattern.compile("^(.+)\\.kt$"), true);
         }
 
-        @TestMetadata("bigEnum.kt")
-        public void testBigEnum() throws Exception {
-            String fileName = JetTestUtils.navigationMetadata("compiler/testData/codegen/bytecodeText/whenEnumOptimization/bigEnum.kt");
+        @TestMetadata("bigEnumTest.kt")
+        public void testBigEnumTest() throws Exception {
+            String fileName = JetTestUtils.navigationMetadata("compiler/testData/codegen/bytecodeText/whenEnumOptimization/bigEnumTest.kt");
             doTest(fileName);
         }
 

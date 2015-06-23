@@ -3703,9 +3703,9 @@ public class BlackBoxWithStdlibCodegenTestGenerated extends AbstractBlackBoxCode
             JetTestUtils.assertAllTestsPresentByMetadata(this.getClass(), new File("compiler/testData/codegen/boxWithStdlib/whenEnumOptimization"), Pattern.compile("^(.+)\\.kt$"), true);
         }
 
-        @TestMetadata("bigEnum.kt")
-        public void testBigEnum() throws Exception {
-            String fileName = JetTestUtils.navigationMetadata("compiler/testData/codegen/boxWithStdlib/whenEnumOptimization/bigEnum.kt");
+        @TestMetadata("bigEnumTest.kt")
+        public void testBigEnumTest() throws Exception {
+            String fileName = JetTestUtils.navigationMetadata("compiler/testData/codegen/boxWithStdlib/whenEnumOptimization/bigEnumTest.kt");
             doTestWithStdlib(fileName);
         }
 
