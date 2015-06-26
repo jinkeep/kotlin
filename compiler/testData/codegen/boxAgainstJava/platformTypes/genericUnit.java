@@ -1,4 +1,4 @@
-public class GenericUnit {
+public class genericUnit {
     public static class Key<T> {}
 
     public static <T> T getNull(Key<T> key) {

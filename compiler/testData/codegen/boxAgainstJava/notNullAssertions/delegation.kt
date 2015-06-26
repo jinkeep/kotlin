@@ -2,8 +2,8 @@ interface Tr {
     fun foo(): String
 }
 
-class DelegateTo : Delegation.ReturnNull(), Tr {
-    override fun foo() = super<Delegation.ReturnNull>.foo()
+class DelegateTo : delegation.ReturnNull(), Tr {
+    override fun foo() = super<delegation.ReturnNull>.foo()
 }
 
 class DelegateFrom : Tr by DelegateTo() {

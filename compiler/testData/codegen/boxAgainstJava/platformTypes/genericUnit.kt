@@ -1,4 +1,4 @@
-import GenericUnit.*
+import genericUnit.*
 
 val key = Key<Unit>()
 
