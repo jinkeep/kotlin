@@ -69,7 +69,7 @@ public class PackagePartClassUtils {
         if (jetFile != null) {
             for (PsiElement child : jetFile.getChildren()) {
                 if (child instanceof JetClassOrObject) {
-                    if (fileName.equals(((JetClassOrObject) child).getName())) {
+                    if (fileName.equalsIgnoreCase(((JetClassOrObject) child).getName())) {
                         System.out.println("CLASH:" + fileName);
                         fileName += "_";
                         break;
