@@ -59,6 +59,13 @@ public class PackagePartClassUtils {
     public static FqName getPackagePartFqName(@NotNull FqName facadeFqName, @NotNull VirtualFile file, @Nullable JetFile jetFile) {
         String fileName = FileUtil.getNameWithoutExtension(PathUtil.getFileName(file.getName()));
 
+        if (!fileName.isEmpty()) {
+            char c = fileName.charAt(0);
+            if ('a' <= c && c <= 'z') {
+                fileName = Character.toUpperCase(fileName.charAt(0)) + fileName.substring(1);
+            }
+        }
+
         if (jetFile != null) {
             for (PsiElement child : jetFile.getChildren()) {
                 if (child instanceof JetClassOrObject) {
@@ -68,13 +75,6 @@ public class PackagePartClassUtils {
                         break;
                     }
                 }
-            }
-        }
-
-        if (!fileName.isEmpty()) {
-            char c = fileName.charAt(0);
-            if ('a' <= c && c <= 'z') {
-                fileName = Character.toUpperCase(fileName.charAt(0)) + fileName.substring(1);
             }
         }
 
