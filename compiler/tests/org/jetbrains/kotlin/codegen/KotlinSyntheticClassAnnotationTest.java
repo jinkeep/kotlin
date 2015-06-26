@@ -50,7 +50,7 @@ public class KotlinSyntheticClassAnnotationTest extends CodegenTestCase {
     public void testPackagePart() {
         doTestKotlinSyntheticClass(
                 "fun foo() = 42",
-                "$",
+                "A_test", //default test file
                 PACKAGE_PART
         );
     }
