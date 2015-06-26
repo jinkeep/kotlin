@@ -418,9 +418,9 @@ public class BlackBoxAgainstJavaCodegenTestGenerated extends AbstractBlackBoxCod
             JetTestUtils.assertAllTestsPresentByMetadata(this.getClass(), new File("compiler/testData/codegen/boxAgainstJava/notNullAssertions"), Pattern.compile("^(.+)\\.kt$"), true);
         }
 
-        @TestMetadata("Delegation.kt")
+        @TestMetadata("delegation.kt")
         public void testDelegation() throws Exception {
-            String fileName = JetTestUtils.navigationMetadata("compiler/testData/codegen/boxAgainstJava/notNullAssertions/Delegation.kt");
+            String fileName = JetTestUtils.navigationMetadata("compiler/testData/codegen/boxAgainstJava/notNullAssertions/delegation.kt");
             doTestAgainstJava(fileName);
         }
     }
@@ -433,9 +433,9 @@ public class BlackBoxAgainstJavaCodegenTestGenerated extends AbstractBlackBoxCod
             JetTestUtils.assertAllTestsPresentByMetadata(this.getClass(), new File("compiler/testData/codegen/boxAgainstJava/platformTypes"), Pattern.compile("^(.+)\\.kt$"), true);
         }
 
-        @TestMetadata("GenericUnitKt.kt")
-        public void testGenericUnitKt() throws Exception {
-            String fileName = JetTestUtils.navigationMetadata("compiler/testData/codegen/boxAgainstJava/platformTypes/GenericUnitKt.kt");
+        @TestMetadata("genericUnit.kt")
+        public void testGenericUnit() throws Exception {
+            String fileName = JetTestUtils.navigationMetadata("compiler/testData/codegen/boxAgainstJava/platformTypes/genericUnit.kt");
             doTestAgainstJava(fileName);
         }
     }
